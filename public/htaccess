@@ -1,0 +1,11 @@
+ErrorDocument 504 504.html
+ErrorDocument 500 500.html
+ErrorDocument 406 406.html
+ErrorDocument 404 404.html
+ErrorDocument 403 403.html
+ErrorDocument 401 401.html
+
+RewriteEngire on
+RewriteCond %{RESQUEST_FILENAME} !-d
+RewriteCond %{RESQUEST_FILENAME}.php -f 
+RewriteRule ^(.*)$ $1.php
